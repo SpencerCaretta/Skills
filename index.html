@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Project 1</title>
+        <!--Reset-->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <!-- Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Jquery Link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <!--Firebase not sure if I will use-->
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    </head>
+
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4" id="header">Add Skills Here</h1>
+                <p class="lead">Click on the add button to add the skill you want to work on.</p>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class ="row">
+                <div class = "col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Skill Input</label>
+                            <input type="text" class="form-control" id="skillInput" placeholder="Skill">
+                        </div>
+                    </form>
+                    <button id = "add-button">Add Skill</button>
+                </div>
+            </div>
+        </div>
+        <div class = "container">
+            <div class ="row">
+                <div class = "col-md-12">
+                    <div id = "added-skill"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!--Javascript for this program-->
+    <script src = "assets/js/app.js"></script>
+</html>
