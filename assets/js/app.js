@@ -52,7 +52,7 @@ var stopwatch = {
     clearInterval(intervalId);
     clockRunning = false;
   },
-  finish: function() {
+  finish: function(event) {
 
     var hours = stopwatch.time / 3600
 
@@ -61,10 +61,20 @@ var stopwatch = {
     //       and save the result in a variable.
     // var converted = stopwatch.timeConverter(stopwatch.time);
     //Grab current time in "time-doing-skill" and added our converted stopwatch time
-    $("#time-doing-skill").text("You have gained: " + experienceGained + " experience!");
+    $("#time-doing-skill").text("You have gained: " + experienceGained.toFixed(3) + " experience!");
 
     //Add experience to firebase
+    event.preventDefault();
 
+    //Create Local Object
+    var exp = {
+      ExperienceGained: experienceGained.toFixed(3),
+    }
+
+    //Uploads experience gained to firebase
+    database.ref().push(exp);
+
+    
     //Logs total experience
 
   },
